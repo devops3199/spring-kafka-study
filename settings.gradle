@@ -1,0 +1,3 @@
+rootProject.name = 'kafka-point-application'
+include 'point-producer'
+include 'point-consumer'
