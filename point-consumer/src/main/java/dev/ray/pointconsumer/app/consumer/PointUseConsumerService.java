@@ -15,7 +15,8 @@ public class PointUseConsumerService {
 
     @KafkaListener(topics = "use-points", groupId = "point-team")
     public void consume(PointUse message) {
-        System.out.println("[points-use] Received message: " + message);
+        receivedMessages.add(message);
+        System.out.println("[points-use] Received message: " + message.getContent());
     }
 
     public List<PointUse> getReceivedMessages() {
